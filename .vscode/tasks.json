@@ -1,0 +1,28 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+	  {
+		"label": "Build and Run",
+		"type": "shell",
+		"command": "g++",
+		"args": [
+		  "-std=c++0x",
+		  "-o",
+		  "sumer",
+		  "DatabaseConnection/DatabaseConnector.cpp",
+		  "main.cpp",
+		  "Cppfiles/Customer.cpp",
+		  "Cppfiles/BankClass.cpp",
+		  "-I/usr/local/mysql-connector-c++-8.0.33/include/jdbc",
+		  "-L/usr/local/mysql-connector-c++-8.0.33/lib64",
+		  "-lmysqlcppconn"
+		 
+		],
+		"group": {
+		  "kind": "build",
+		  "isDefault": true
+		}
+	  }
+	]
+  }
+  
